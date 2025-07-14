@@ -12,6 +12,8 @@ interface PropertyDetailProps {
   };
 }
 
+import ReviewSection from "./ReviewSection";
+
 export default function PropertyDetail({ property }: PropertyDetailProps) {
   return (
     <div className="p-6 max-w-4xl mx-auto">
@@ -26,6 +28,7 @@ export default function PropertyDetail({ property }: PropertyDetailProps) {
         GH₵{property.price}
       </p>
       <p className="text-gray-700">{property.description}</p>
+      <ReviewSection propertyId={property.id} />
     </div>
   );
 }
